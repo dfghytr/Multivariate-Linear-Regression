@@ -25,32 +25,22 @@ Predict the CO2 emission of a car where the weight is 3300kg, and the volume is 
 Print the predicted output.
 
 ## Program:
-```
-##program to find the 
-##developed by:Abdul kalaam k m
-##register number :23005114
-
+```python
+#Developed by: Abdul kalaam k m
+#Reg no:23005114
 import pandas as pd
 from sklearn import linear_model
-df = pd.read_csv("cars.csv")
-X = df[['Weight', 'Volume']]
-y = df['CO2']
-regr = linear_model.LinearRegression()
-regr.fit(X, y)
-print('Coefficients:', regr.coef_)
-print('Intercept:',regr.intercept_)
-predictedCO2 = regr.predict([[3300, 1300]])
-print('Predicted CO2 for the corresponding weight and volume',predictedCO2)
-
+df=pd.read_csv("cars (1).csv")
+a=df[['Weight','Volume']]
+b=df[['CO2']]
+regr=linear_model.LinearRegression()
+regr.fit(a,b)
+print("Coefficient:",regr.coef_)
+print("Intercept:",regr.intercept_)
+print("Amount:",regr.predict([[3300,1300]]))
 ```
 ## Output:
-![Screenshot 2023-12-27 150450](https://github.com/23004205/Multivariate-Linear-Regression/assets/138971114/01c6b672-8d03-4836-b20a-40aa87783255)
-
-### Insert your out:
-```
-Coefficients: [0.00755095 0.00780526]
-Intercept: 79.69471929115939
-Predicted CO2 for the corresponding weight and volume [114.75968007]
-```
+### Insert your output
+![image](https://github.com/23006860/Multivariate-Linear-Regression/assets/139841752/25cce7e4-721e-487e-b847-a41540965e3f)
 ## Result
 Thus the multivariate linear regression is implemented and predicted the output using python program.
